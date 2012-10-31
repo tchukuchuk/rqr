@@ -1,0 +1,25 @@
+/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/bin/ruby extconf.rb
+checking for jpeglib.h... yes
+checking for main() in -ljpeg... no
+checking for png.h... no
+checking for tiff.h... yes
+checking for main() in -ltiff... no
+creating Makefile
+
+make
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c qr_wrap.cxx
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c qr_draw_jpeg.cpp
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c qr_draw_png.cpp
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c qr_draw_ps.cpp
+qr_draw_ps.cpp:24:29: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
+                return( this->write(data, "wb") );
+                                          ^
+1 warning generated.
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c qr_draw_tiff.cpp
+c++  -I. -I/opt/local/include -I. -I/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.3.0 -I. -DHAVE_JPEGLIB_H -DHAVE_TIFF_H -I/opt/local/include -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/include'  -fno-common -g -O2  -pipe -fno-common    -c QR_Encode.cpp
+cc -dynamic -bundle -undefined suppress -flat_namespace -o QR.bundle qr_wrap.o qr_draw_jpeg.o qr_draw_png.o qr_draw_ps.o qr_draw_tiff.o QR_Encode.o -L. -L/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib -L/opt/local/lib -L. -L'/Users/jbiard/.rbenv/versions/ree-1.8.7-2011.03/lib'     -lsupc++  -L/opt/local/lib -ldl -lobjc  
+ld: warning: directory not found for option '-L/opt/local/lib'
+ld: warning: directory not found for option '-L/opt/local/lib'
+ld: library not found for -lsupc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [QR.bundle] Error 1
